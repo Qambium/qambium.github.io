@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<style media="screen">
+
+  article header {
+    text-align : center;
+    margin-top : 8rem;
+  }
+
+  article header h1 {
+    font-weight : 200;
+
+  }
+
+  article header .post-meta {
+    margin-top : 2rem;
+    margin-bottom : 4rem;
+
+    font-weight : 200;
+    color : rgb(172, 180, 184);
+    text-transform : uppercase;
+  }
+
+  article p {
+    color : var(--secondary);
+  }
+
+  article .author {
+    border-top : 1px solid rgba(0,0,0,0.1);
+    border-bottom : 1px solid rgba(0,0,0,0.1);
+    margin-top : 3rem;
+    margin-bottom : 3rem;
+    padding-top : 3rem;
+    padding-bottom : 3rem;
+  }
+</style>
+<article>
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {%- if page.author -%}
+
+    <div class="author">
+      <p>{{ page.author }}</p>
+    </div>
+
+  {%- endif -%}</p>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

@@ -1,0 +1,210 @@
+---
+layout: default
+---
+
+<style media="screen">
+
+  h1, h2, h3, h4, h5 {
+    text-transform : uppercase;
+    font-weight : 900;
+  }
+
+  a {
+    color : var(--dark);
+    text-decoration : none;
+    font-weight : bold;
+  }
+
+  a:hover {
+    color : var(--success);
+    text-decoration : none;
+  }
+
+
+  .site-header {
+    /* On soustraite la hauteur de la Navbar. */
+    height: calc(100vh - 57px);
+    display : flex;
+    align-items : center;
+    justify-content : start;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .site-header .site-title {
+    letter-spacing: .3rem;
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform : uppercase;
+  }
+  @media (max-width: 576px) {
+    .site-header .site-title {
+      font-size : 3rem;
+    }
+  }
+
+  .site-header .lead {
+    font-size : 2rem;
+    font-weight : 200;
+    max-width : 800px;
+  }
+
+  .posts-list h4{
+    text-transform : none;
+    font-weight : normal;
+  }
+
+  .more-posts {
+    font-size : 1rem;
+    font-weight : 900;
+    text-transform : uppercase;
+  }
+</style>
+
+<div class="site-header d-flex align-items-center justify-content-start border-bottom" style = "height : calc(100vh - 57px); ">
+
+  <!-- <div class="container"> -->
+    <!-- <div class="d-flex align-items-end justify-content-start"> -->
+      <div class="container">
+        <h1 class = "site-title">{{site.title}}</h1>
+        <p class = "lead">{{site.description}}</p>
+      </div>
+    <!-- </div> -->
+  <!-- </div> -->
+
+</div>
+
+<div class="bg-light border-bottom" style = "padding : 3rem 0rem;">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 ml-auto mr-auto">
+
+        <h2 class = "mb-5 text-center">Derniers articles</h2>
+
+        <ul class="list-group posts-list">
+        {% for post in site.posts limit: 3 %}
+
+          <li class="list-group-item p-5 ">
+
+            <div class="d-flex justify-content-between">
+              <a href="{{post.url}}"><h4>{{ post.title }}</h4></a>
+              <span class = "ml-3 text-secondary">{{post.date | date: "%d/%m/%Y"}}</span>
+            </div>
+
+            <div class="text-secondary">
+              <p >{{post.excerpt}}</p>
+            </div>
+
+            <a class = "float-right" href="{{post.url}}">lire l'article...</a>
+
+          </li>
+
+        {% endfor %}
+        </ul>
+
+        <div class = "text-center mt-5">
+          <a class = "more-posts" href="/blog"> Plus d'article ...</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .container -->
+
+</div>
+
+<div class="pt-5">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 ml-auto mr-auto">
+
+        <h2 class = "mb-5" style = "font-weight : 900; text-transform : uppercase;">Applications</h2>
+
+        <p>
+          J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal. Et puis autant que ce soit utiles ! Mes application sont donc toutes <a href="https://fr.wikipedia.org/wiki/Mouvement_du_logiciel_libre">open source</a>.
+          C'est en particulier la programmation d'application web qui me fascine. Mais sont inconvennient majeur est qu'elle nécessite un serveur web pour heberger l'application.
+          <a href="https://github.com">Github</a> propose d'heberger le code source d'applciation sous la forme de dépot <a href="https://fr.wikipedia.org/wiki/Git">Git</a>.
+          Et permet également d'héberger des sites statiques.
+        </p>
+        <p>
+          C'est pourquoi j'ai décidé d'heberger mes applications sur <a href="https://pages.github.com">Github Pages</a>. Contrairement à un site dynamique, le site statique n'a pas reccours à du code coté serveur (par ex PHP) pour intéroger des bases de données
+          et produire du contenu de manière dynamique.
+          Cette logique ma donc contraint à développer des application web s'executtant sur le navigateur du client après chargement du nécessaire depuis le serveur... Bref... Je vous ai perdu (mais c'est déjà énorme que vous ayez lu jusque ici), ce sont des <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">"Single Page Applications"</a> développées en javascript et utilisant le Framework <a href="https://fr.wikipedia.org/wiki/AngularJS">AngularJS</a>.
+        </p>
+
+        <div class="mt-5 mb-5 card-deck" ng-app = "QambiumHome">
+          {% for app in site.data.applications%}
+
+            <div class="card mb-3" style = "flex-basis : 40%">
+              <div class="card-body">
+                <h5 class="card-title">{{app.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"><repostats url = "https://api.github.com/repos/{{app.github}}/"></repostats></h6>
+                <p class="card-text">{{app.description}}</p>
+
+              </div>
+              <div class="card-footer">
+                <a href="{{app.link}}" class="card-link">Utiliser</a>
+                <a href="https://github.com/{{app.github}}" class="card-link">Code Source</a>
+              </div>
+            </div>
+
+          {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- .container -->
+</div>
+
+<script type="text/javascript">
+
+  var QH = angular.module('QambiumHome', [], function($interpolateProvider) {
+      $interpolateProvider.startSymbol('{n_');
+      $interpolateProvider.endSymbol('_g}');
+  });
+  QH.directive('repostats', function($http){
+    return {
+      restrict: 'E',
+      // transclude: true,
+      template : '<i class="fas fa-undo-alt"></i> <span ng-bind = "commits"></span> - <i class="fas fa-users"></i> <span ng-bind = "contributors"></span>',
+      scope: {
+        url : '@url'
+      },
+      link: function(scope, elem, attr) {
+
+        scope.commits = 0;
+        scope.branches = 0;
+        scope.contributors = 0;
+
+        scope.$watch('url', function(url){
+          scope.url = url;
+          if(scope.url != null && scope.url != ""){
+            $http({
+              method: 'GET',
+              url: scope.url + 'commits'
+            }).then(function successCallback(response) {
+              scope.commits = response.data.length +
+              ' commit' +
+              (response.data.length > 1 ? 's' : '');
+            }, function errorCallback(response) {console.error(response);});
+
+            $http({
+              method: 'GET',
+              url: scope.url + 'stats/contributors'
+            }).then(function successCallback(response) {
+              scope.contributors = response.data.length +
+              ' contributeur' +
+              (response.data.length > 1 ? 's' : '');
+            }, function errorCallback(response) {console.error(response);});
+
+          }
+        });
+      }
+    }
+  });
+</script>

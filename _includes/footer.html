@@ -1,0 +1,22 @@
+<div class="footer">
+
+  <i class="far fa-copyright"></i>
+  Copyright 2015
+  <a href="mailto:{{ site.email }}">{{ site.author | escape }}</a>
+  - Abonnez-vous <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>
+
+</div>
+
+<style media="screen">
+  .footer {
+    color : var(--secondary);
+    margin-bottom : 3rem;
+    text-align : center;
+  }
+
+  .footer a {
+    color : var(--dark);
+    font-size : 10rem;
+    text-decoration : none;
+  }
+</style>
