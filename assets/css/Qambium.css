@@ -1,0 +1,82 @@
+h1, h2, h3, h4, h5 {
+  text-transform : uppercase;
+  font-weight : 900;
+}
+
+a {
+  color : var(--dark);
+  text-decoration : none;
+  font-weight : bold;
+}
+
+a:hover {
+  color : var(--success);
+  text-decoration : none;
+}
+
+
+.site-header {
+  /* On soustraite la hauteur de la Navbar. */
+  height: calc(100vh - 57px);
+  display : flex;
+  align-items : center;
+  justify-content : start;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.site-header .site-title {
+  letter-spacing: .3rem;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform : uppercase;
+}
+@media (max-width: 576px) {
+  .site-header .site-title {
+    font-size : 3rem;
+  }
+}
+
+.site-header .lead {
+  font-size : 2rem;
+  font-weight : 200;
+  max-width : 800px;
+}
+
+.posts-list h4{
+  text-transform : none;
+  font-weight : normal;
+}
+
+.more-posts {
+  font-size : 1rem;
+  font-weight : 900;
+  text-transform : uppercase;
+}
+
+/* BLOG ---------------------------------------- */
+
+.posts .post{
+  border-bottom : 1px solid rgba(0,0,0,.1);
+  padding : 5rem 0;
+}
+
+/* .posts .post:last-child {
+  border-bottom : 1px solid rgba(0,0,0,.1);
+  margin-bottom : 5rem;
+} */
+
+.posts .post a {
+  color : var(--dark);
+  text-decoration : none;
+}
+
+.posts .post .date {
+  color : var(--secondary);
+  text-transform : uppercase;
+}
+
+.posts .post p {
+  color : var(--secondary);
+  font-size : 1.2rem;
+  font-weight: 300;
+}

@@ -2,77 +2,38 @@
 layout: default
 ---
 
-    <div class="header pb-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
 
-      <p class="" style = "font-size : 2.5rem; margin-bottom : 0px;">Qambium</p>
-      <p class="lead">Un blog sur tout ce qui me tiens à coeur.</p>
+      {%- if site.posts.size > 0 -%}
+
+        <div class="posts mt-4 mb-5">
+          {%- for post in site.posts -%}
+
+              <div class="post">
+
+                <div class="d-flex justify-content-between">
+                  <a class="title" href="{{ post.url | relative_url }}">
+                    <h3>{{ post.title | escape }}</h3>
+                  </a>
+
+                  <span class="date">{%- include date.html -%}</span>
+                </div>
+
+                <p class="excerpt">{{ post.excerpt }}</p>
+
+              </div>
+              <!-- .post -->
+
+          {%- endfor -%}
+
+        </div>
+        <!-- .posts -->
+
+      {%- endif -%}
 
     </div>
-
-    <style media="screen">
-
-      .header {
-        text-align : center;
-        margin-top : 8rem;
-      }
-
-      .posts .post{
-        border-top : 1px solid rgba(0,0,0,.1);
-        padding : 5rem 0;
-      }
-
-      /* .posts .post:last-child {
-        border-bottom : 1px solid rgba(0,0,0,.1);
-        margin-bottom : 5rem;
-      } */
-
-      .posts .post a {
-        color : var(--dark);
-        text-decoration : none;
-      }
-
-      .posts .post .date {
-        color : var(--secondary);
-        text-transform : uppercase;
-      }
-
-      .posts .post p {
-        color : var(--secondary);
-        font-size : 1.2rem;
-        font-weight: 300;
-      }
-
-
-    </style>
-
-    {%- if site.posts.size > 0 -%}
-
-      <div class="posts">
-        {%- for post in site.posts -%}
-
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-
-
-
-
-            <div class="post">
-
-              <div class="d-flex justify-content-between">
-                <a class="title" href="{{ post.url | relative_url }}">
-                  <h3>{{ post.title | escape }}</h3>
-                </a>
-
-                <span class="date">{{ post.date | date: date_format }}</span>
-              </div>
-
-              <p class="excerpt">{{ post.excerpt }}</p>
-
-            </div>
-            <!-- .post -->
-
-        {%- endfor -%}
-
-      </div>
-      <!-- .posts -->
-
-    {%- endif -%}
+  </div>
+</div>
+<!-- .container -->
