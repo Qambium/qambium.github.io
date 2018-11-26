@@ -43,8 +43,7 @@ layout: default
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {%- include date.html -%}
       </time>
   </header>
 
@@ -55,19 +54,33 @@ layout: default
         {{ content }}
 
         <div class="card bg-light mt-5 mb-5">
-          <div class="card-body">
+          <div class="card-body p-5">
             <div class="row justify-content-center text-center text-sm-left">
               <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center pr-sm-3 pb-3 pb-sm-0">
                 <img class="rounded-circle img-fluid" src="http://qambiumflf.cluster021.hosting.ovh.net/ProfileGump.png" alt="">
               </div>
               <div class="col-sm">
+
+                {% assign author = site.data.members[page.author] %}
+
                 <h5>{{page.author}}</h5>
-                <p class="text-dark">Créateur du site Qambium. Comment dire, "Je comprends vite, mais il faut expliquer longtemps !" :)</p>
-                <p class="text-dark">Follow <a class="text-dark" href="https://www.instagram.com/marcusbonus67/">@Instagram</a></p>
+                <p class="text-dark">{{author.description}}</p>
+                <p class="text-dark">
+                  {% if author.social.instagram %}
+                    <a class="text-dark" href="{{author.social.instagram}}">@Instagram</a>
+                  {% endif %}
+                  {% if author.social.email %}
+                    <a class="text-dark" href="mailto:{{author.social.email}}">@Email</a>
+                  {% endif %}
+                </p>
               </div>
             </div>
           </div>
         </div>
+
+        {%- if site.disqus.shortname -%}
+          {%- include disqus_comments.html -%}
+        {%- endif -%}
 
       </div>
     </div>
@@ -75,10 +88,6 @@ layout: default
   <!-- .container -->
 
 
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
