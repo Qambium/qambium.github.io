@@ -78,9 +78,23 @@ layout: default
           </div>
         </div>
 
-        {%- if site.disqus.shortname -%}
-          {%- include disqus_comments.html -%}
-        {%- endif -%}
+        {% if jekyll.environment == "production" %}
+
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = '{{ page.url | absolute_url }}';
+              this.page.identifier = '{{ page.url | absolute_url }}';
+            };
+            (function() {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Merci d'activer javascript pour voir les commentaires <a href="https://disqus.com/?ref_noscript" rel="nofollow">Disqus.</a></noscript>
+        {% endif %}
 
       </div>
     </div>
