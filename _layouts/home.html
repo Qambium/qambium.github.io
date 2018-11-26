@@ -139,7 +139,7 @@ layout: default
           if(scope.url != null && scope.url != ""){
             $http({
               method: 'GET',
-              url: scope.url + 'commits'
+              url: scope.url + 'commits?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
             }).then(function successCallback(response) {
               scope.commits = response.data.length +
               ' commit' +
@@ -148,7 +148,7 @@ layout: default
 
             $http({
               method: 'GET',
-              url: scope.url + 'stats/contributors'
+              url: scope.url + 'stats/contributors?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
             }).then(function successCallback(response) {
               scope.contributors = response.data.length +
               ' contributeur' +

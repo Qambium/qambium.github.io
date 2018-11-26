@@ -35,12 +35,19 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-
-    <ul class="navbar-nav ml-auto mr-5 ">
+    <ul class="navbar-nav ">
 
       <li class="nav-item">
-        <a class="nav-link" href="/about/">À propos</a>
+        <a class="nav-link" href="https://qambium.fr/Woodstock.js">Woodstock.js</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Woodstock.js">Ecoflore</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto mr-5 ">
 
       <li class="nav-item">
         <a class="nav-link" href="/blog/">Blog</a>
@@ -309,7 +316,7 @@
           if(scope.url != null && scope.url != ""){
             $http({
               method: 'GET',
-              url: scope.url + 'commits'
+              url: scope.url + 'commits?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
             }).then(function successCallback(response) {
               scope.commits = response.data.length +
               ' commit' +
@@ -318,7 +325,7 @@
 
             $http({
               method: 'GET',
-              url: scope.url + 'stats/contributors'
+              url: scope.url + 'stats/contributors?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
             }).then(function successCallback(response) {
               scope.contributors = response.data.length +
               ' contributeur' +

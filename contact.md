@@ -4,4 +4,4 @@ title: Contact
 permalink: /contact/
 link : contact
 ---
-Vous pouvez me contacter l'addresse suivante : [marcusbonus67@gmail.com](mailto:marcusbonus67@gmail.com)
+Vous pouvez me contacter l'addresse suivante : [marc.muller@qambium.fr](mailto:marc.muller@qambium.fr)
