@@ -77,38 +77,49 @@ layout: default
 
   <div class="container">
 
-    <div class="row">
-      <div class="col-md-10 ml-auto mr-auto">
 
         <h2 class = "mb-5 text-center">Derniers articles</h2>
 
-        <ul class="list-group posts-list">
-        {% for post in site.posts limit: 3 %}
+        <div class="card-deck">
 
-          <li class="list-group-item p-5 ">
+          {% for post in site.posts limit: 3 %}
 
-            <div class="d-flex justify-content-between">
-              <a href="{{post.url}}"><h4>{{ post.title }}</h4></a>
-              <span class = "ml-3 text-secondary">{{post.date | date: "%d/%m/%Y"}}</span>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{post.date | date: "%d/%m/%Y"}} - {{post.author}}</h6>
+                <p class="card-text">{{post.excerpt}}</p>
+
+              </div>
+              <div class="card-footer bg-white text-center">
+                <a href="{{post.url}}" class="card-link">Lire l'article...</a>
+              </div>
             </div>
 
-            <div class="text-secondary">
-              <p >{{post.excerpt}}</p>
-            </div>
+            <!-- <li class="list-group-item p-5 ">
 
-            <a class = "float-right" href="{{post.url}}">lire l'article...</a>
+              <div class="d-flex justify-content-between">
+                <a href="{{post.url}}"><h4>{{ post.title }}</h4></a>
+                <span class = "ml-3 text-secondary">{{post.date | date: "%d/%m/%Y"}}</span>
+              </div>
 
-          </li>
+              <div class="text-secondary">
+                <p >{{post.excerpt}}</p>
+              </div>
 
-        {% endfor %}
-        </ul>
+              <a class = "float-right" href="{{post.url}}">lire l'article...</a>
 
-        <div class = "text-center mt-5">
-          <a class = "more-posts" href="/blog"> Plus d'article ...</a>
+            </li> -->
+
+          {% endfor %}
+
         </div>
 
-      </div>
-    </div>
+
+        <div class = "text-center mt-5">
+          <a class = "more-posts" href="/blog"> Plus d'articles ...</a>
+        </div>
+
 
   </div>
   <!-- .container -->
