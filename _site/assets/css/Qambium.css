@@ -1,3 +1,17 @@
+/* GREEN : #4e834d */
+
+:root {
+  --green: #4e834d !important;
+}
+
+.navbar {
+  background-color: #fcfff5 !important;
+  padding-top: 1rem;
+  padding-bottom : 1rem;
+}
+
+
+
 h1, h2, h3, h4, h5 {
   text-transform : uppercase;
   font-weight : 900;
@@ -14,14 +28,16 @@ a:hover {
   text-decoration : none;
 }
 
-
+p {
+  text-align: justify;
+}
 .site-header {
   /* On soustraite la hauteur de la Navbar. */
   height: calc(100vh - 57px);
   display : flex;
   align-items : center;
   justify-content : start;
-  border-bottom: 1px solid #dee2e6;
+  /* border-bottom: 1px solid #dee2e6; */
 }
 
 .site-header .site-title {
@@ -56,14 +72,15 @@ a:hover {
 /* BLOG ---------------------------------------- */
 
 .posts .post{
-  border-bottom : 1px solid rgba(0,0,0,.1);
-  padding : 5rem 0;
+  padding : 2rem 0;
 }
 
-/* .posts .post:last-child {
-  border-bottom : 1px solid rgba(0,0,0,.1);
-  margin-bottom : 5rem;
-} */
+
+.posts .post:first-child {
+  padding-top : 5rem;
+
+}
+
 
 .posts .post a {
   color : var(--dark);

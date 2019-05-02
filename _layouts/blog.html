@@ -2,16 +2,16 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 ml-auto mr-auto">
+{%- if site.posts.size > 0 -%}
 
-      {%- if site.posts.size > 0 -%}
+  <div class="posts">
+    {%- for post in site.posts -%}
 
-        <div class="posts mt-4 mb-5">
-          {%- for post in site.posts -%}
+        <div class="post">
 
-              <div class="post">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 ml-auto mr-auto">
 
                 <div class="d-flex justify-content-between">
                   <a class="title" href="{{ post.url | relative_url }}">
@@ -24,16 +24,17 @@ layout: default
                 <p class="excerpt">{{ post.excerpt }}</p>
 
               </div>
-              <!-- .post -->
+            </div>
+          </div>
 
-          {%- endfor -%}
+
 
         </div>
-        <!-- .posts -->
+        <!-- .post -->
 
-      {%- endif -%}
+    {%- endfor -%}
 
-    </div>
   </div>
-</div>
-<!-- .container -->
+  <!-- .posts -->
+
+{%- endif -%}

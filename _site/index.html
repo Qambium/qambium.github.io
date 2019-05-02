@@ -27,7 +27,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 </head>
-<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom"><a class="ml-5 navbar-brand" href="/">Qambium</a>
+<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white"><a class="ml-5 navbar-brand" href="/">Qambium</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,6 +36,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <ul class="navbar-nav ">
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Qenobi.js">Qenobi</a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="https://qambium.fr/Woodstock.js">Woodstock.js</a>
@@ -63,11 +67,37 @@
 </nav>
 
 <style media="screen">
+
+  .navbar-brand {
+    /* font-size : 1.4rem !important; */
+    font-weight: 800;
+    text-transform : uppercase;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.6);
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.5);
+  }
+
+  .navbar .navbar-nav .nav-link.active {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.8);
+    padding-bottom : 2px;
+    padding-left :0px;
+    padding-right : 0px;
+    border-bottom : 2px solid var(--green);
+  }
+
   body {
-    padding-top : 57px;
+    padding-top : 72px;
   }
 </style>
-<div class="site-header d-flex align-items-center justify-content-start border-bottom" style = "height : calc(100vh - 57px); ">
+<div class="site-header d-flex align-items-center justify-content-start" style = "height : calc(100vh - 57px); ">
 
   <!-- <div class="container"> -->
     <!-- <div class="d-flex align-items-end justify-content-start"> -->
@@ -80,157 +110,9 @@
 
 </div>
 
-<div class="bg-light border-bottom" style = "padding : 3rem 0rem;">
-
-  <div class="container">
 
 
-        <h2 class = "mb-5 text-center">Derniers articles</h2>
-
-        <div class="card-deck">
-
-          
-
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Fabrication du Poulailler</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-
-
-  
-  23
-  Nov
-    
-  2018
-
-- Marcus</h6>
-                <p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-</p>
-
-              </div>
-              <div class="card-footer bg-white text-center">
-                <a href="/bricolage/2018/11/23/fabrictation-du-poullailler.html" class="card-link">Lire l'article...</a>
-              </div>
-            </div>
-
-            <!-- <li class="list-group-item p-5 ">
-
-              <div class="d-flex justify-content-between">
-                <a href="/bricolage/2018/11/23/fabrictation-du-poullailler.html"><h4>Fabrication du Poulailler</h4></a>
-                <span class = "ml-3 text-secondary">23/11/2018</span>
-              </div>
-
-              <div class="text-secondary">
-                <p ><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-</p>
-              </div>
-
-              <a class = "float-right" href="/bricolage/2018/11/23/fabrictation-du-poullailler.html">lire l'article...</a>
-
-            </li> -->
-
-          
-
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Encore un essai</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-
-
-  
-  20
-  Nov
-    
-  2018
-
-- Marcus</h6>
-                <p class="card-text"><p>Ehh oui encore un essai !</p>
-
-</p>
-
-              </div>
-              <div class="card-footer bg-white text-center">
-                <a href="/bricolage/2018/11/20/encore-un-essai.html" class="card-link">Lire l'article...</a>
-              </div>
-            </div>
-
-            <!-- <li class="list-group-item p-5 ">
-
-              <div class="d-flex justify-content-between">
-                <a href="/bricolage/2018/11/20/encore-un-essai.html"><h4>Encore un essai</h4></a>
-                <span class = "ml-3 text-secondary">20/11/2018</span>
-              </div>
-
-              <div class="text-secondary">
-                <p ><p>Ehh oui encore un essai !</p>
-
-</p>
-              </div>
-
-              <a class = "float-right" href="/bricolage/2018/11/20/encore-un-essai.html">lire l'article...</a>
-
-            </li> -->
-
-          
-
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Welcome to Jekyll!</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-
-
-  
-  4
-  Juil
-    
-  2015
-
-- Marcus</h6>
-                <p class="card-text"><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-</p>
-
-              </div>
-              <div class="card-footer bg-white text-center">
-                <a href="/jekyll/update/2015/07/04/welcome-to-jekyll.html" class="card-link">Lire l'article...</a>
-              </div>
-            </div>
-
-            <!-- <li class="list-group-item p-5 ">
-
-              <div class="d-flex justify-content-between">
-                <a href="/jekyll/update/2015/07/04/welcome-to-jekyll.html"><h4>Welcome to Jekyll!</h4></a>
-                <span class = "ml-3 text-secondary">04/07/2015</span>
-              </div>
-
-              <div class="text-secondary">
-                <p ><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-</p>
-              </div>
-
-              <a class = "float-right" href="/jekyll/update/2015/07/04/welcome-to-jekyll.html">lire l'article...</a>
-
-            </li> -->
-
-          
-
-        </div>
-
-
-        <div class = "text-center mt-5">
-          <a class = "more-posts" href="/blog"> Plus d'articles ...</a>
-        </div>
-
-
-  </div>
-  <!-- .container -->
-
-</div>
-
-<div class="pt-5">
+<div class="pt-5 bg-light">
   <div class="container">
 
     <div class="row">
@@ -238,46 +120,47 @@
 
         <h2 class = "mb-5" style = "font-weight : 900; text-transform : uppercase;">Applications</h2>
 
-        <p>
-          J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal. Et puis autant que ce soit utiles ! Mes application sont donc toutes <a href="https://fr.wikipedia.org/wiki/Mouvement_du_logiciel_libre">open source</a>.
-          C'est en particulier la programmation d'application web qui me fascine. Mais sont inconvennient majeur est qu'elle nécessite un serveur web pour heberger l'application.
-          <a href="https://github.com">Github</a> propose d'heberger le code source d'applciation sous la forme de dépot <a href="https://fr.wikipedia.org/wiki/Git">Git</a>.
-          Et permet également d'héberger des sites statiques.
-        </p>
-        <p>
-          C'est pourquoi j'ai décidé d'heberger mes applications sur <a href="https://pages.github.com">Github Pages</a>. Contrairement à un site dynamique, le site statique n'a pas reccours à du code coté serveur (par ex PHP) pour intéroger des bases de données
-          et produire du contenu de manière dynamique.
-          Cette logique ma donc contraint à développer des application web s'executtant sur le navigateur du client après chargement du nécessaire depuis le serveur... Bref... Je vous ai perdu (mais c'est déjà énorme que vous ayez lu jusque ici), ce sont des <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">"Single Page Applications"</a> développées en javascript et utilisant le Framework <a href="https://fr.wikipedia.org/wiki/AngularJS">AngularJS</a>.
+        <p>J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes <a href="https://fr.wikipedia.org/wiki/Mouvement_du_logiciel_libre">open source</a>.
+          C'est en particulier la programmation d'application web qui me fascine. Plus particulièrement les <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">"Single Page Applications" (SPA)</a> (ou application mono-pages en français).
+          <a href="/programmation/2018/12/01/mes-applications.html">En savoir plus ...</a>
         </p>
 
-        <div class="mt-5 mb-5 card-deck" ng-app = "QambiumHome">
+
+
+        <div class="mt-3 mb-5 row" ng-app = "QambiumHome">
           
 
-            <div class="card mb-3" style = "flex-basis : 40%">
-              <div class="card-body">
-                <h5 class="card-title">Woodstock.js</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><repostats url = "https://api.github.com/repos/Qambium/Woodstock.js/"></repostats></h6>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-6 ml-auto mr-auto">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Woodstock.js</h5>
+                  <p class="card-text">Woodstock.js est une application open source permettant de cuber des arbres sur pied. Elle utilise la librairie javascript Quercus.js.</p>
 
-              </div>
-              <div class="card-footer">
-                <a href="https://qambium.github.io/Woodstock.js" class="card-link">Utiliser</a>
-                <a href="https://github.com/Qambium/Woodstock.js" class="card-link">Code Source</a>
+                </div>
+                <div class="card-footer">
+                   <a href="https://qambium.github.io/Woodstock.js" class="card-link"><i class="fas fa-mouse-pointer"></i> Voir</a> 
+                   <a href="https://github.com/Qambium/Woodstock.js" class="card-link"><i class="fas fa-code"></i> Code Source</a> 
+                   <a href="/programmation/2018-12-01-woodstock-js.html" class="card-link"><i class="fas fa-question-circle"></i> En savoir plus...</a> 
+
+                </div>
               </div>
             </div>
 
           
 
-            <div class="card mb-3" style = "flex-basis : 40%">
-              <div class="card-body">
-                <h5 class="card-title">Quercus.js</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><repostats url = "https://api.github.com/repos/Qambium/qambium.github.io/"></repostats></h6>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="col-6 ml-auto mr-auto">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Quercus.js</h5>
+                  <p class="card-text">Quercus.js est une librairie javascript permettant de cuber des arbres sur pied en utilisant des tariffs de cubage.</p>
 
-              </div>
-              <div class="card-footer">
-                <a href="https://qambium.github.io/" class="card-link">Utiliser</a>
-                <a href="https://github.com/Qambium/qambium.github.io" class="card-link">Code Source</a>
+                </div>
+                <div class="card-footer">
+                  
+                   <a href="https://github.com/Qambium/Quercus.js" class="card-link"><i class="fas fa-code"></i> Code Source</a> 
+                   <a href="/programmation/2018-12-01-quercus-js.html" class="card-link"><i class="fas fa-question-circle"></i> En savoir plus...</a> 
+
+                </div>
               </div>
             </div>
 
@@ -291,53 +174,115 @@
   <!-- .container -->
 </div>
 
-<script type="text/javascript">
 
-  var QH = angular.module('QambiumHome', [], function($interpolateProvider) {
-      $interpolateProvider.startSymbol('{n_');
-      $interpolateProvider.endSymbol('_g}');
-  });
-  QH.directive('repostats', function($http){
-    return {
-      restrict: 'E',
-      // transclude: true,
-      template : '<i class="fas fa-undo-alt"></i> <span ng-bind = "commits"></span> - <i class="fas fa-users"></i> <span ng-bind = "contributors"></span>',
-      scope: {
-        url : '@url'
-      },
-      link: function(scope, elem, attr) {
+<div class="pt-5 pb-5" >
 
-        scope.commits = 0;
-        scope.branches = 0;
-        scope.contributors = 0;
+  <div class="container">
 
-        scope.$watch('url', function(url){
-          scope.url = url;
-          if(scope.url != null && scope.url != ""){
-            $http({
-              method: 'GET',
-              url: scope.url + 'commits?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
-            }).then(function successCallback(response) {
-              scope.commits = response.data.length +
-              ' commit' +
-              (response.data.length > 1 ? 's' : '');
-            }, function errorCallback(response) {console.error(response);});
+    <div class="row">
+      <div class="col-md-10 ml-auto mr-auto">
 
-            $http({
-              method: 'GET',
-              url: scope.url + 'stats/contributors?access_token=24b8f31a7e7b321d18a1b9dc76ec1aec75694d92'
-            }).then(function successCallback(response) {
-              scope.contributors = response.data.length +
-              ' contributeur' +
-              (response.data.length > 1 ? 's' : '');
-            }, function errorCallback(response) {console.error(response);});
+        <h2>Le Blog</h2>
+        <p class = "mb-5">Voici les derniers articles. Pour en voir plus allez sur le  <a href="/blog">Blog</a> !</p>
 
-          }
-        });
-      }
-    }
-  });
-</script>
+
+
+          <div class="row pl-0">
+            
+
+              <div class="col" >
+
+                  <h5 class="card-title">Woodstock.js</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+
+
+  
+  01
+  Dec
+  
+  2018
+
+- Marcus</h6>
+                  <p class="card-text"><p>Woodstock.js est une application open source gratuite en ligne permettant le cubage des arbres sur pied. C’est une <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">“Single Page Application”</a> (ou application monopage en français). Ecrite en Javascript avec le Framework AngularJS.</p>
+
+</p>
+
+                  <!-- <div class="d-flex"> -->
+                    <a href="/blog/apps/woodstock.js-presentation" class="card-link ml-auto">Lire la suite...</a>
+                  <!-- </div> -->
+
+                <!-- <div class="card-footer bg-white text-center">
+                  <a href="/blog/apps/woodstock.js-presentation" class="card-link">Lire l'article...</a>
+                </div> -->
+              </div>
+
+            
+
+              <div class="col" >
+
+                  <h5 class="card-title">Mes Applications</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+
+
+  
+  01
+  Dec
+  
+  2018
+
+- Marcus</h6>
+                  <p class="card-text"><p>J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">“Single Page Applications”</a> (ou application monopage en français).</p>
+
+</p>
+
+                  <!-- <div class="d-flex"> -->
+                    <a href="/blog/apps/mes-applications" class="card-link ml-auto">Lire la suite...</a>
+                  <!-- </div> -->
+
+                <!-- <div class="card-footer bg-white text-center">
+                  <a href="/blog/apps/mes-applications" class="card-link">Lire l'article...</a>
+                </div> -->
+              </div>
+
+            
+
+              <div class="col" >
+
+                  <h5 class="card-title">Fabrication du Poulailler</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+
+
+  
+  23
+  Nov
+    
+  2018
+
+- Marcus</h6>
+                  <p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+</p>
+
+                  <!-- <div class="d-flex"> -->
+                    <a href="/blog/bricolage/fabrictation-du-poullailler" class="card-link ml-auto">Lire la suite...</a>
+                  <!-- </div> -->
+
+                <!-- <div class="card-footer bg-white text-center">
+                  <a href="/blog/bricolage/fabrictation-du-poullailler" class="card-link">Lire l'article...</a>
+                </div> -->
+              </div>
+
+            
+          </div>
+
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .container -->
+
+</div>
 <div class="footer">
 
   <i class="far fa-copyright"></i>
@@ -349,13 +294,15 @@
 
 <style media="screen">
   .footer {
-    color : var(--secondary);
-    margin-bottom : 3rem;
+    border-top : 1px #ddd solid;
+    color : var(--dark);
+    padding-top : 3rem;
+    padding-bottom : 3rem;
     text-align : center;
   }
 
   .footer a {
-    color : var(--dark);
+
     font-size : 10rem;
     text-decoration : none;
   }

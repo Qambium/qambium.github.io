@@ -20,8 +20,9 @@ description: Transforme la bière en code... et en toutes sortes de choses fort 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://qambium.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  marxus95
 excerpt_separator: <!--more-->
+permalink: /blog/:categories/:title
 disqus:
   shortname : qambium
 # Build settings

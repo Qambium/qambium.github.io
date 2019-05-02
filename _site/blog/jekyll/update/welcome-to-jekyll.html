@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
 <meta property="og:description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
-<link rel="canonical" href="http://localhost:4000/jekyll/update/2015/07/04/welcome-to-jekyll.html" />
-<meta property="og:url" content="http://localhost:4000/jekyll/update/2015/07/04/welcome-to-jekyll.html" />
+<link rel="canonical" href="http://localhost:4000/blog/jekyll/update/welcome-to-jekyll" />
+<meta property="og:url" content="http://localhost:4000/blog/jekyll/update/welcome-to-jekyll" />
 <meta property="og:site_name" content="Qambium" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-07-04T12:03:11+02:00" />
 <script type="application/ld+json">
-{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","author":{"@type":"Person","name":"Marcus"},"@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2015/07/04/welcome-to-jekyll.html","headline":"Welcome to Jekyll!","dateModified":"2015-07-04T12:03:11+02:00","datePublished":"2015-07-04T12:03:11+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2015/07/04/welcome-to-jekyll.html"},"@context":"http://schema.org"}</script>
+{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","author":{"@type":"Person","name":"Marcus"},"@type":"BlogPosting","url":"http://localhost:4000/blog/jekyll/update/welcome-to-jekyll","headline":"Welcome to Jekyll!","dateModified":"2015-07-04T12:03:11+02:00","datePublished":"2015-07-04T12:03:11+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/jekyll/update/welcome-to-jekyll"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Qambium" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -29,7 +29,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 </head>
-<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom"><a class="ml-5 navbar-brand" href="/">Qambium</a>
+<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white"><a class="ml-5 navbar-brand" href="/">Qambium</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <ul class="navbar-nav ">
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Qenobi.js">Qenobi</a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="https://qambium.fr/Woodstock.js">Woodstock.js</a>
@@ -65,53 +69,85 @@
 </nav>
 
 <style media="screen">
+
+  .navbar-brand {
+    /* font-size : 1.4rem !important; */
+    font-weight: 800;
+    text-transform : uppercase;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.6);
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.5);
+  }
+
+  .navbar .navbar-nav .nav-link.active {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.8);
+    padding-bottom : 2px;
+    padding-left :0px;
+    padding-right : 0px;
+    border-bottom : 2px solid var(--green);
+  }
+
   body {
-    padding-top : 57px;
+    padding-top : 72px;
   }
 </style>
 <style media="screen">
 
-  article header {
-    text-align : center;
-    margin-top : 8rem;
+
+
+  .blog-post header {
+    height : calc(100vh - 72px);
+    display : flex;
+    align-items : center;
+    justify-content : center;
+
+    background : #fcfff5 !important;
   }
 
-  article header h1 {
-    font-weight : 900;
-    text-transform : uppercase;
+    .blog-post header time {
+      font-weight : 300;
+      font-size : 1.3rem !important;
 
-  }
+    }
 
-  article header .post-meta {
-    margin-top : 2rem;
-    margin-bottom : 4rem;
+    .blog-post header h1 {
+      margin-top : 1rem;
+      font-size : 3rem;
+    }
 
-    font-weight : 200;
-    color : rgb(172, 180, 184);
-    text-transform : uppercase;
-  }
+    .blog-post header p {
+      font-weight : 200;
+      font-size : 1.3rem !important;
+    }
 
-  article p {
-    color : var(--secondary);
-  }
-
-  article .author {
-    border-top : 1px solid rgba(0,0,0,0.1);
-    border-bottom : 1px solid rgba(0,0,0,0.1);
-    margin-top : 3rem;
-    margin-bottom : 3rem;
+  .blog-post article {
     padding-top : 3rem;
-    padding-bottom : 3rem;
   }
-</style>
-<article>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Welcome to Jekyll!</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2015-07-04T12:03:11+02:00" itemprop="datePublished">
+    .blog-post article p {
+      /* color : var(--secondary); */
+      font-size : 20px;
+      font-weight : 300;
+    }
+
+</style>
+
+<div class="blog-post">
+
+  <header>
+    <div class = "col-md-8 ml-auto mr-auto">
+
+        <time datetime="2015-07-04T12:03:11+02:00">
   
-  4
+  04
   Juil
     
   2015
@@ -119,13 +155,22 @@
 
 
 </time>
+
+      <h1 class="post-title">Welcome to Jekyll!</h1>
+
+      <p class = "post-description"><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+</p>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 ml-auto mr-auto">
+  <article>
 
-        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+
+          <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.
 <!--more--></p>
 
 <p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
@@ -142,42 +187,89 @@
 
 
 
-        <div class="card bg-light mt-5 mb-5">
-          <div class="card-body p-5">
-            <div class="row justify-content-center text-center text-sm-left">
-              <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center pr-sm-3 pb-3 pb-sm-0">
-                <img class="rounded-circle img-fluid" src="http://qambiumflf.cluster021.hosting.ovh.net/ProfileGump.png" alt="">
-              </div>
-              <div class="col-sm">
+        </div>
+      </div>
+    </div>
 
-                
+  </article>
 
-                <h5>Marcus</h5>
-                <p class="text-dark">Créateur du site Qambium. Me décrire ? Je comprends vite, mais il faut expliquer longtemps ! :)</p>
-                <p class="text-dark">
-                  
-                    <a class="text-dark" href="https://www.instagram.com/marcusbonus67/">@Instagram</a>
-                  
-                  
-                    <a class="text-dark" href="mailto:marc.muller@qambium.fr">@Email</a>
-                  
-                </p>
-              </div>
-            </div>
+  <style media="screen">
+    .blog-post .author {
+      background : var(--light);
+      margin-top : 3rem;
+      color : #333;
+    }
+
+      .blog-post .author p {
+        font-weight : 200;
+        margin : 0px;
+        font-size : 20px;
+      }
+      .blog-post .author h5 {
+        margin-top : 0;
+        font-size : 2.5rem;
+      }
+  </style>
+
+  <div class="author">
+
+    <div class="container">
+      <div class="col-md-8 ml-auto mr-auto">
+
+        <div class="row pt-5 pb-5 justify-content-center text-center text-sm-left">
+          <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center ">
+            <img class="rounded-circle img-fluid" src="http://qambiumflf.cluster021.hosting.ovh.net/ProfileGump.png" alt="">
+          </div>
+          <div class="col-sm">
+
+            
+
+            <h5>Marcus</h5>
+            <p>Créateur du site Qambium. Je comprends vite, mais il faut expliquer longtemps ! :)</p>
+            <p>
+              
+                <a href="https://www.instagram.com/marcusbonus67/">@Instagram</a>
+              
+              
+                <a href="mailto:marc.muller@qambium.fr">@Email</a>
+              
+            </p>
           </div>
         </div>
 
-        
+      </div>
+    </div>
 
+  </div>
+  <!-- .authors -->
+
+  <style media="screen">
+    .blog-post .comments {
+      margin-top : 3rem;
+      margin-bottom : 3rem;
+    }
+  </style>
+
+  <div class="comments">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+
+
+          <!-- <h3>Commentaires</h3> -->
+          
+            <div class="alert alert-danger">
+              Disqus est disponible uniquement en mode production.
+            </div>
+          
+
+        </div>
       </div>
     </div>
   </div>
-  <!-- .container -->
+  <!-- .comments -->
 
-
-
-  <a class="u-url" href="/jekyll/update/2015/07/04/welcome-to-jekyll.html" hidden></a>
-</article>
+</div>
 <div class="footer">
 
   <i class="far fa-copyright"></i>
@@ -189,13 +281,15 @@
 
 <style media="screen">
   .footer {
-    color : var(--secondary);
-    margin-bottom : 3rem;
+    border-top : 1px #ddd solid;
+    color : var(--dark);
+    padding-top : 3rem;
+    padding-bottom : 3rem;
     text-align : center;
   }
 
   .footer a {
-    color : var(--dark);
+
     font-size : 10rem;
     text-decoration : none;
   }

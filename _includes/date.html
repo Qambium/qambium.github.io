@@ -1,6 +1,6 @@
 {% if page.date %}
   {% assign m = page.date | date: "%-m" %}
-  {{ page.date | date: "%-d" }}
+  {{ page.date | date: "%d" }}
   {% case m %}
     {% when '1' %}Jan
     {% when '2' %}Fev
@@ -20,7 +20,7 @@
 
 {% if post.date %}
   {% assign m = post.date | date: "%-m" %}
-  {{ post.date | date: "%-d" }}
+  {{ post.date | date: "%d" }}
   {% case m %}
     {% when '1' %}Jan
     {% when '2' %}Fev

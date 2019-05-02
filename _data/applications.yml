@@ -1,9 +1,16 @@
 - name: Woodstock.js
   github: Qambium/Woodstock.js
   link : https://qambium.github.io/Woodstock.js
-  description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  description : >-
+    Woodstock.js est une application open source
+    permettant de cuber des arbres sur pied.
+    Elle utilise la librairie javascript Quercus.js.
+  more : '/programmation/2018-12-01-woodstock-js.html'
 
 - name: Quercus.js
-  github: Qambium/qambium.github.io
-  link : https://qambium.github.io/
-  description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  github: Qambium/Quercus.js
+  description : >-
+    Quercus.js est une librairie javascript permettant
+    de cuber des arbres sur pied en utilisant des tariffs
+    de cubage.
+  more : '/programmation/2018-12-01-quercus-js.html'

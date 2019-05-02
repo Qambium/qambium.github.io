@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Mes Applications | Qambium</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Mes Applications" />
+<meta name="author" content="Marcus" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les “Single Page Applications” (ou application monopage en français)." />
+<meta property="og:description" content="J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les “Single Page Applications” (ou application monopage en français)." />
+<link rel="canonical" href="http://localhost:4000/blog/apps/mes-applications" />
+<meta property="og:url" content="http://localhost:4000/blog/apps/mes-applications" />
+<meta property="og:site_name" content="Qambium" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-01T17:34:11+01:00" />
+<script type="application/ld+json">
+{"description":"J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les “Single Page Applications” (ou application monopage en français).","author":{"@type":"Person","name":"Marcus"},"@type":"BlogPosting","url":"http://localhost:4000/blog/apps/mes-applications","headline":"Mes Applications","dateModified":"2018-12-01T17:34:11+01:00","datePublished":"2018-12-01T17:34:11+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/apps/mes-applications"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Qambium" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/assets/css/Qambium.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white"><a class="ml-5 navbar-brand" href="/">Qambium</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ">
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Qenobi.js">Qenobi</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Woodstock.js">Woodstock.js</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Woodstock.js">Ecoflore</a>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto mr-5 ">
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/blog/">Blog</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<style media="screen">
+
+  .navbar-brand {
+    /* font-size : 1.4rem !important; */
+    font-weight: 800;
+    text-transform : uppercase;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.6);
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.5);
+  }
+
+  .navbar .navbar-nav .nav-link.active {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.8);
+    padding-bottom : 2px;
+    padding-left :0px;
+    padding-right : 0px;
+    border-bottom : 2px solid var(--green);
+  }
+
+  body {
+    padding-top : 72px;
+  }
+</style>
+<style media="screen">
+
+
+
+  .blog-post header {
+    height : calc(100vh - 72px);
+    display : flex;
+    align-items : center;
+    justify-content : center;
+
+    background : #fcfff5 !important;
+  }
+
+    .blog-post header time {
+      font-weight : 300;
+      font-size : 1.3rem !important;
+
+    }
+
+    .blog-post header h1 {
+      margin-top : 1rem;
+      font-size : 3rem;
+    }
+
+    .blog-post header p {
+      font-weight : 200;
+      font-size : 1.3rem !important;
+    }
+
+  .blog-post article {
+    padding-top : 3rem;
+  }
+
+    .blog-post article p {
+      /* color : var(--secondary); */
+      font-size : 20px;
+      font-weight : 300;
+    }
+
+</style>
+
+<div class="blog-post">
+
+  <header>
+    <div class = "col-md-8 ml-auto mr-auto">
+
+        <time datetime="2018-12-01T17:34:11+01:00">
+  
+  01
+  Dec
+  
+  2018
+
+
+
+</time>
+
+      <h1 class="post-title">Mes Applications</h1>
+
+      <p class = "post-description"><p>J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">“Single Page Applications”</a> (ou application monopage en français).</p>
+
+</p>
+    </div>
+  </header>
+
+  <article>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+
+          <p>J’adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C’est en particulier la programmation d’application web qui me fascine. Plus particulièrement les <a href="https://fr.wikipedia.org/wiki/Application_web_monopage">“Single Page Applications”</a> (ou application monopage en français).
+<!--more-->
+Laissez moi vous expliquer mes choix d’architecture pour le développement des mes applications.</p>
+
+<h3 id="angularjs">AngularJS</h3>
+
+<p>Ce sont des applications web écrites en javascript qui ne nécessitent le chargement que d’une seule page contenant toutes les ressources nécessaire au fonctionnement de l’application (js et css). La navigation se fait alors sans changer d’emplacement sur le serveur. Et toutes les ressources chargées après le chargement initial de la page se fait en arrière plan grâce à des requêtes
+<a href="https://fr.wikipedia.org/wiki/Ajax_%28informatique%29">AJAX</a>.</p>
+
+<p><img src="https://tecorb.com/wp-content/uploads/2017/01/angularjs-rails-asynchrous-diagram1.png" alt="" class="center-image" /></p>
+
+<p>J’ai découvert le framework  <a href="https://fr.wikipedia.org/wiki/AngularJS">AngularJS</a> développé par Google qui est très puissant et facile à prendre en main pour développer des applications monopages (quand on a déjà programmer avant…).</p>
+
+<p>Il utilise l’architecture <a href="https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur">MVC</a> ou Modèle-Vue-Contrôleur.</p>
+
+<ul>
+  <li>Un Contrôleur est une classe qui se charge des interactions avec l’utilisateur.</li>
+  <li>Un Modèle est une classe qui gère les données à afficher.</li>
+  <li>Et un une Vue qui contient la présentation de l’interface graphique.</li>
+</ul>
+
+<p><em>(Oui bon ce n’est pas dans l’ordre des initiales mais c’est l’ordre le plus logique ! Car le contrôleur gère l’interaction d’un utilisateur, demande des données au modèle et met en forme la vue pour rendre à l’utilisateur ce qu’il demande… Renommons ça le CMV ! Hmm c’est moins classe…)</em></p>
+
+<h3 id="hébergement">Hébergement</h3>
+
+<p>Pour ce qui est de l’hébergement, j’ai opté pour <a href="https://pages.github.com">Github Pages</a> qui permet d’héberger des sites statiques. Ceci ne pose pas de problèmes en soit pour des applications monopages. Mais vous pouvez oublier php, nodeJS, base de données, et tout ce qui permet de générer du contenu de manière dynamique sur le serveur. Bref, oubliez le <a href="https://fr.wikipedia.org/wiki/Backend">Back-End</a>, tout se passe sur le <a href="https://fr.wikipedia.org/wiki/Frontal_serveur">Front-End</a>.</p>
+
+<p>Afin de permettre à l’utilisateur de conserver ses données sans avoir à les stocker sur le serveur, donc à recouvrir à système de connexion/compte en ligne. J’ai du opté pour un bon vieux système de sauvegarde dans des fichiers.</p>
+
+<p>Le client peut enregistrer son projet à tous moment et peut l’ouvrir sur le serveur quand il le décide.
+C’est donc le client qui est responsable de la sauvegarde de ses données et on peut se passer de bases données et de gros scripts en Back-End pour enregistrer les données du client sur le serveur. Pas de cookies, de perte de mot de passe, de newlesters… Bref on s’abstient de toutes les joies de l’administration d’un serveur…</p>
+
+<p>N’importe qui peut utiliser l’application sans avoir à créer de compte, peut partager un de ses projets tout simplement en envoyant par mail son fichier de données.</p>
+
+<p>En tout cas retenons l’essentiel de l’hébergement sur Github Pages : <strong>c’est gratuit !</strong> (enfin pour l’instant, rappellont que Microsoft vient de racheter Github…).</p>
+
+
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <style media="screen">
+    .blog-post .author {
+      background : var(--light);
+      margin-top : 3rem;
+      color : #333;
+    }
+
+      .blog-post .author p {
+        font-weight : 200;
+        margin : 0px;
+        font-size : 20px;
+      }
+      .blog-post .author h5 {
+        margin-top : 0;
+        font-size : 2.5rem;
+      }
+  </style>
+
+  <div class="author">
+
+    <div class="container">
+      <div class="col-md-8 ml-auto mr-auto">
+
+        <div class="row pt-5 pb-5 justify-content-center text-center text-sm-left">
+          <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center ">
+            <img class="rounded-circle img-fluid" src="http://qambiumflf.cluster021.hosting.ovh.net/ProfileGump.png" alt="">
+          </div>
+          <div class="col-sm">
+
+            
+
+            <h5>Marcus</h5>
+            <p>Créateur du site Qambium. Je comprends vite, mais il faut expliquer longtemps ! :)</p>
+            <p>
+              
+                <a href="https://www.instagram.com/marcusbonus67/">@Instagram</a>
+              
+              
+                <a href="mailto:marc.muller@qambium.fr">@Email</a>
+              
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .authors -->
+
+  <style media="screen">
+    .blog-post .comments {
+      margin-top : 3rem;
+      margin-bottom : 3rem;
+    }
+  </style>
+
+  <div class="comments">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+
+
+          <!-- <h3>Commentaires</h3> -->
+          
+            <div class="alert alert-danger">
+              Disqus est disponible uniquement en mode production.
+            </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .comments -->
+
+</div>
+<div class="footer">
+
+  <i class="far fa-copyright"></i>
+  Copyright 2015
+  <a href="mailto:marcusbonus67@gmail.com">Marc Muller</a>
+  - Abonnez-vous <a href="/feed.xml">via RSS</a>
+
+</div>
+
+<style media="screen">
+  .footer {
+    border-top : 1px #ddd solid;
+    color : var(--dark);
+    padding-top : 3rem;
+    padding-bottom : 3rem;
+    text-align : center;
+  }
+
+  .footer a {
+
+    font-size : 10rem;
+    text-decoration : none;
+  }
+</style>
+</body>
+
+</html>

@@ -10,11 +10,11 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Transforme la bière en code… et en toutes sortes de choses fort sympatiques." />
 <meta property="og:description" content="Transforme la bière en code… et en toutes sortes de choses fort sympatiques." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<link rel="canonical" href="http://localhost:4000/404" />
+<meta property="og:url" content="http://localhost:4000/404" />
 <meta property="og:site_name" content="Qambium" />
 <script type="application/ld+json">
-{"description":"Transforme la bière en code… et en toutes sortes de choses fort sympatiques.","author":{"@type":"Person","name":"Marc Muller"},"@type":"WebPage","url":"http://localhost:4000/404.html","headline":"Qambium","@context":"http://schema.org"}</script>
+{"description":"Transforme la bière en code… et en toutes sortes de choses fort sympatiques.","author":{"@type":"Person","name":"Marc Muller"},"@type":"WebPage","url":"http://localhost:4000/404","headline":"Qambium","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <!-- <link rel="stylesheet" href="/assets/main.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Qambium" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 </head>
-<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom"><a class="ml-5 navbar-brand" href="/">Qambium</a>
+<body><nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white"><a class="ml-5 navbar-brand" href="/">Qambium</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,6 +36,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <ul class="navbar-nav ">
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://qambium.fr/Qenobi.js">Qenobi</a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="https://qambium.fr/Woodstock.js">Woodstock.js</a>
@@ -63,8 +67,34 @@
 </nav>
 
 <style media="screen">
+
+  .navbar-brand {
+    /* font-size : 1.4rem !important; */
+    font-weight: 800;
+    text-transform : uppercase;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.6);
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.5);
+  }
+
+  .navbar .navbar-nav .nav-link.active {
+    text-transform : uppercase;
+    color : rgba(0,0,0,.8);
+    padding-bottom : 2px;
+    padding-left :0px;
+    padding-right : 0px;
+    border-bottom : 2px solid var(--green);
+  }
+
   body {
-    padding-top : 57px;
+    padding-top : 72px;
   }
 </style>
 <style type="text/css" media="screen">
@@ -98,13 +128,15 @@
 
 <style media="screen">
   .footer {
-    color : var(--secondary);
-    margin-bottom : 3rem;
+    border-top : 1px #ddd solid;
+    color : var(--dark);
+    padding-top : 3rem;
+    padding-bottom : 3rem;
     text-align : center;
   }
 
   .footer a {
-    color : var(--dark);
+
     font-size : 10rem;
     text-decoration : none;
   }
