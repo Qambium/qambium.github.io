@@ -93,7 +93,11 @@ layout: default
                 </div> -->
               </div>
 
-            {% else %}
+
+            {% endif %}
+
+
+            {% if jekyll.environment != "production" %}
 
               <div class="col" >
 
@@ -109,8 +113,8 @@ layout: default
                   <a href="{{post.url}}" class="card-link">Lire l'article...</a>
                 </div> -->
               </div>
+              
             {% endif %}
-
 
 
             {% endfor %}
