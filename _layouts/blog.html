@@ -7,30 +7,57 @@ layout: default
   <div class="posts">
     {%- for post in site.posts -%}
 
-        <div class="post">
+    {% if jekyll.environment == "production" and post.prod == true %}
+      <div class="post">
 
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 ml-auto mr-auto">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
 
-                <div class="d-flex justify-content-between">
-                  <a class="title" href="{{ post.url | relative_url }}">
-                    <h3>{{ post.title | escape }}</h3>
-                  </a>
+              <div class="d-flex justify-content-between">
+                <a class="title" href="{{ post.url | relative_url }}">
+                  <h3>{{ post.title | escape }}</h3>
+                </a>
 
-                  <span class="date">{%- include date.html -%}</span>
-                </div>
-
-                <p class="excerpt">{{ post.excerpt }}</p>
-
+                <span class="date">{%- include date.html -%}</span>
               </div>
+
+              <p class="excerpt">{{ post.excerpt }}</p>
+
             </div>
           </div>
-
-
-
         </div>
-        <!-- .post -->
+
+      </div>
+      <!-- .post -->
+    {% endif %}
+
+    {% if jekyll.environment != "production" %}
+      <div class="post">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+
+              <div class="d-flex justify-content-between">
+                <a class="title" href="{{ post.url | relative_url }}">
+                  <h3>{{ post.title | escape }}</h3>
+                </a>
+
+                <span class="date">{%- include date.html -%}</span>
+              </div>
+
+              <p class="excerpt">{{ post.excerpt }}</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- .post -->
+    {% endif %}
+
+
 
     {%- endfor -%}
 
