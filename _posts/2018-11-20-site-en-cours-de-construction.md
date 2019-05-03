@@ -1,11 +1,16 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-07-04 11:03:11 +0100
-categories: jekyll update
+title:  "En cours de construction..."
+date:   2019-05-02 11:03:00 +0100
+categories: home
 author : Marcus
-prod : false
+prod : true
 ---
+Ce site web est en cours de construction ! Ce n'est pas évident de réaliser son site de A à Z.
+<!--more-->
+
+## Jekyll
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 <!--more-->
 

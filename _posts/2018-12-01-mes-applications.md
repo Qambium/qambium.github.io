@@ -4,6 +4,7 @@ title:  "Mes Applications"
 date:   2018-12-01 17:34:11 +0100
 categories: apps
 author : Marcus
+prod : false
 ---
 
 J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C'est en particulier la programmation d'application web qui me fascine. Plus particulièrement les ["Single Page Applications"](https://fr.wikipedia.org/wiki/Application_web_monopage) (ou application monopage en français).
