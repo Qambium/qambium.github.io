@@ -5,23 +5,22 @@ date:   2018-12-01 17:34:11 +0100
 categories: apps
 author : Marcus
 prod : false
+description : J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal !
 ---
 
-J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal ! Autant que ce soit utile, mes applications sont toutes open source. C'est en particulier la programmation d'application web qui me fascine. Plus particulièrement les ["Single Page Applications"](https://fr.wikipedia.org/wiki/Application_web_monopage) (ou application monopage en français).
-<!--more-->
 Laissez moi vous expliquer mes choix d'architecture pour le développement des mes applications.
 
 ### AngularJS
 
 Ce sont des applications web écrites en javascript qui ne nécessitent le chargement que d'une seule page contenant toutes les ressources nécessaire au fonctionnement de l'application (js et css). La navigation se fait alors sans changer d'emplacement sur le serveur. Et toutes les ressources chargées après le chargement initial de la page se fait en arrière plan grâce à des requêtes
 [AJAX](https://fr.wikipedia.org/wiki/Ajax_%28informatique%29).
-
+# Titre 1
 ![](https://tecorb.com/wp-content/uploads/2017/01/angularjs-rails-asynchrous-diagram1.png){: .center-image }
 
 J'ai découvert le framework  [AngularJS](https://fr.wikipedia.org/wiki/AngularJS) développé par Google qui est très puissant et facile à prendre en main pour développer des applications monopages (quand on a déjà programmer avant...).
 
 
-
+## Titre 2
 Il utilise l'architecture [MVC](https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur) ou Modèle-Vue-Contrôleur.
 
 - Un Contrôleur est une classe qui se charge des interactions avec l'utilisateur.

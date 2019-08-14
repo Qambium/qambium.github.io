@@ -1,26 +1,42 @@
 /* GREEN : #4e834d */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
 
+
+body {
+  font-family: 'Lato';
+  font-size: 1.3rem;
+  /* font-weight: 300; */
+}
 :root {
   --green: #4e834d !important;
 }
 
 .navbar {
-  background-color: #fcfff5 !important;
+  /* background-color: #fcfff5 !important; */
   padding-top: 1rem;
   padding-bottom : 1rem;
 }
 
+.navbar .nav-link {
+  font-size : 1rem;
+}
 
 
-h1, h2, h3, h4, h5 {
-  text-transform : uppercase;
+h1, h2, h3, h4, h5, h6 {
   font-weight : 900;
+  /* margin-top : 2.5rem; */
+}
+
+h3, h4, h5, h6 {
+  font-weight : 900;
+  /* margin-top : 2rem; */
 }
 
 a {
   color : var(--dark);
   text-decoration : none;
-  font-weight : bold;
+  /* font-weight : bold; */
 }
 
 a:hover {
@@ -41,7 +57,7 @@ p {
 }
 
 .site-header .site-title {
-  letter-spacing: .3rem;
+  /* letter-spacing: .3rem; */
   font-size: 5rem;
   font-weight: 900;
   text-transform : uppercase;
@@ -54,7 +70,7 @@ p {
 
 .site-header .lead {
   font-size : 2rem;
-  font-weight : 200;
+  font-weight : 300;
   max-width : 800px;
 }
 
@@ -71,14 +87,9 @@ p {
 
 /* BLOG ---------------------------------------- */
 
+
 .posts .post{
-  padding : 2rem 0;
-}
-
-
-.posts .post:first-child {
-  padding-top : 5rem;
-
+  padding-bottom : 4rem ;
 }
 
 
@@ -97,3 +108,39 @@ p {
   font-size : 1.2rem;
   font-weight: 300;
 }
+
+
+
+
+.app-list a{
+  /* word-spacing: 30px; */
+}
+
+  .app-list .card-title {
+    /* font-size: 2rem; */
+  }
+  .app-list .card-text {
+    font-size: 1.2rem !important;
+    font-weight: 300;
+  }
+
+  .app-list .card-link {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+
+
+
+
+
+
+
+.footer {
+  text-align : center;
+  font-size : 1rem;
+  color : #6c757d;
+}
+  .footer a {
+    color : #6c757d;
+  }

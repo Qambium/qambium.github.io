@@ -14,14 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Qambium
-email: marcusbonus67@gmail.com
+email: marcmul@icloud.com
 author : Marc Muller
 description: Transforme la bière en code... et en toutes sortes de choses fort sympatiques.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://qambium.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  marxus95
-excerpt_separator: <!--more-->
+# excerpt_separator: <!--more-->
 permalink: /blog/:categories/:title
 disqus:
   shortname : qambium

@@ -12,7 +12,8 @@ layout: default
     align-items : center;
     justify-content : center;
 
-    background : #fcfff5 !important;
+    /* background : #fcfff5 !important; */
+    border-bottom : 1px solid #eee;
   }
 
     .blog-post header time {
@@ -26,18 +27,19 @@ layout: default
       font-size : 3rem;
     }
 
-    .blog-post header p {
+    .post-description {
       font-weight : 200;
-      font-size : 1.3rem !important;
+      font-size : 1.5rem !important;
+      margin-bottom : 2rem;
     }
 
   .blog-post article {
     padding-top : 3rem;
   }
 
-    .blog-post article p {
+    .blog-post article  {
       /* color : var(--secondary); */
-      font-size : 20px;
+      font-size : 1.3rem;
       font-weight : 300;
     }
 
@@ -46,15 +48,19 @@ layout: default
 <div class="blog-post">
 
   <header>
-    <div class = "col-md-8 ml-auto mr-auto">
+    <div class="container">
+      <div class="row">
+        <div class = "col-md-10 ml-auto mr-auto">
 
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-          {%- include date.html -%}
-        </time>
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+              {%- include date.html -%}
+            </time>
 
-      <h1 class="post-title">{{ page.title | escape }}</h1>
+          <h1 class="post-title">{{ page.title | escape }}</h1>
 
-      <p class = "post-description">{{ page.excerpt}}</p>
+          <!-- <p class = "post-description">{{ page.description}}</p> -->
+        </div>
+      </div>
     </div>
   </header>
 
@@ -63,6 +69,8 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
+
+          <p class = "post-description">{{ page.description}}</p>
 
           {{ content }}
 
@@ -135,7 +143,7 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
-          
+
           {% if jekyll.environment == "production" %}
 
           <div id="disqus_thread"></div>

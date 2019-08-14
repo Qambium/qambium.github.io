@@ -4,40 +4,15 @@ layout: default
 
 {%- if site.posts.size > 0 -%}
 
-  <div class="posts">
-    {%- for post in site.posts -%}
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
 
-    {% if jekyll.environment == "production" and post.prod == true %}
-      <div class="post">
+        <div class="posts">
+          {%- for post in site.posts -%}
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-
-              <div class="d-flex justify-content-between">
-                <a class="title" href="{{ post.url | relative_url }}">
-                  <h3>{{ post.title | escape }}</h3>
-                </a>
-
-                <span class="date">{%- include date.html -%}</span>
-              </div>
-
-              <p class="excerpt">{{ post.excerpt }}</p>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- .post -->
-    {% endif %}
-
-    {% if jekyll.environment != "production" %}
-      <div class="post">
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
+          {% if jekyll.environment == "production" and post.prod == true %}
+            <div class="post">
 
               <div class="d-flex justify-content-between">
                 <a class="title" href="{{ post.url | relative_url }}">
@@ -47,21 +22,41 @@ layout: default
                 <span class="date">{%- include date.html -%}</span>
               </div>
 
-              <p class="excerpt">{{ post.excerpt }}</p>
+              <p class="excerpt">{{ post.description }}</p>
+
 
             </div>
-          </div>
+            <!-- .post -->
+          {% endif %}
+
+          {% if jekyll.environment != "production" %}
+            <div class="post">
+
+              <div class="d-flex justify-content-between">
+                <a class="title" href="{{ post.url | relative_url }}">
+                  <h3>{{ post.title | escape }}</h3>
+                </a>
+
+                <span class="date">{%- include date.html -%}</span>
+              </div>
+
+              <p class="excerpt">{{ post.description }}</p>
+
+
+            </div>
+            <!-- .post -->
+          {% endif %}
+
+
+
+          {%- endfor -%}
+
         </div>
+        <!-- .posts -->
 
       </div>
-      <!-- .post -->
-    {% endif %}
 
-
-
-    {%- endfor -%}
-
+    </div>
   </div>
-  <!-- .posts -->
 
 {%- endif -%}
