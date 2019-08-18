@@ -2,9 +2,8 @@
 layout: post
 title:  "Mes Applications"
 date:   2018-12-01 17:34:11 +0100
-categories: apps
+categorie: Programmation
 author : Marcus
-prod : false
 description : J'adore bidouiller, concevoir et fabriquer des choses. Pour moi la programmation est donc un régal !
 ---
 

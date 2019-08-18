@@ -1,0 +1,39 @@
+{% if page.date %}
+  {% assign m = page.date | date: "%-m" %}
+  {{ page.date | date: "%d" }}
+  {% case m %}
+    {% when '1' %}. I .
+    {% when '2' %}. II .
+    {% when '3' %}. III .
+    {% when '4' %}. IV .
+    {% when '5' %}. V .
+    {% when '6' %}. VI .
+    {% when '7' %}. VII .
+    {% when '8' %}. VIII .
+    {% when '9' %}. IX .
+    {% when '10' %}. X .
+    {% when '11' %}. XI .
+    {% when '12' %}. XII .
+  {% endcase %}
+  {{ page.date | date: "%Y" }}
+{% endif %}
+
+{% if post.date %}
+  {% assign m = post.date | date: "%-m" %}
+  {{ post.date | date: "%d" }}
+  {% case m %}
+    {% when '1' %}. I .
+    {% when '2' %}. II .
+    {% when '3' %}. III .
+    {% when '4' %}. IV .
+    {% when '5' %}. V .
+    {% when '6' %}. VI .
+    {% when '7' %}. VII .
+    {% when '8' %}. VIII .
+    {% when '9' %}. IX .
+    {% when '10' %}. X .
+    {% when '11' %}. XI .
+    {% when '12' %}. XII .
+  {% endcase %}
+  {{ post.date | date: "%Y" }}
+{% endif %}

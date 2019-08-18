@@ -2,9 +2,8 @@
 layout: post
 title:  "En cours de construction..."
 date:   2019-05-02 11:03:00 +0100
-categories: home
+categorie: Programmation
 author : Marcus
-prod : true
 description : Ce site web est en cours de construction ! Ce n'est pas évident de réaliser son site de A à Z.
 ---
 

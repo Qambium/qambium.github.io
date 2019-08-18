@@ -1,84 +1,37 @@
 ---
 layout: default
 ---
-{%- if site.posts.size > 0 -%}
 
-  <div class="container pt-5">
-    <div class="row">
-      <div class="col-md-8 ml-auto mr-auto">
-
-        <div class="posts">
-          {%- for app in site.data.applications -%}
-
-
-          <div class="post">
-
-            <div class="d-flex justify-content-between">
-              <a class="title" href="{{ post.url | relative_url }}">
-                <h3>{{ app.name | escape }}</h3>
-              </a>
-
-              <!-- <span class="date">{%- include date.html -%}</span> -->
-            </div>
-
-            <p class="excerpt">{{ app.description }}</p>
-
-            <div>
-              {% if app.link %} <a class="card-link" href="{{app.link}}" class="card-link"><i class="fas fa-mouse-pointer"></i> Voir</a> {% endif %}
-              {% if app.github %} <a class="card-link" href="https://github.com/{{app.github}}" class="card-link"><i class="fas fa-code"></i> Code Source</a> {% endif %}
-              {% if app.more %} <a class="card-link" href="{{app.more}}" class="card-link"><i class="fas fa-question-circle"></i> En savoir plus...</a> {% endif %}
-            </div>
-
-          </div>
-          <!-- .post -->
+<script src="/assets/js/qambium.js" charset="utf-8"></script>
+<div ng-app = "qambium">
 
 
 
-          {%- endfor -%}
+    {%- for app in site.data.applications -%}
 
+
+    <div class="card mb-5">
+      <div class="card-body">
+        <a class="title" href="{{ post.url | relative_url }}">
+          <h3>{{ app.name | escape }}</h3>
+        </a>
+
+        <p class="excerpt">{{ app.description }}</p>
+        <div>
+          {% if app.link %} <a class="card-link" href="{{app.link}}" class="card-link"><i class="fas fa-mouse-pointer"></i> Voir</a> {% endif %}
+          {% if app.github %} <a class="card-link" href="https://github.com/{{app.github}}" class="card-link"><i class="fas fa-code"></i> Code Source</a> {% endif %}
+          {% if app.more %} <a class="card-link" href="{{app.more}}" class="card-link"><i class="fas fa-question-circle"></i> En savoir plus...</a> {% endif %}
         </div>
-        <!-- .posts -->
-
       </div>
 
-    </div>
-  </div>
-
-{%- endif -%}
-
-
-<div class="container mt-5 ">
-  <div class="row">
-    <div class="col-md-8 ml-auto mr-auto">
-
-      <div class="app-list">
-        {% for app in site.data.applications%}
-
-          <div class="card mb-5" >
-            <div class="card-body">
-              <h3 class="card-title">{{app.name}}</h3>
-              <p class="card-text">{{app.description}}</p>
-              <!-- <p class = "">
-                <a class = "card-link" href=""><i class="far fa-hand-pointer"></i> Utiliser</a>
-                <a class = "card-link" href="#"><i class="fas fa-code"></i> Code</a>
-                <a class = "card-link" href="#"><i class="fas fa-info-circle"></i> En savoir plus...</a>
-              </p> -->
-              <p class=""><small class="text-muted">Dernière mise à jour le 8 juillet 2019</small></p>
-            </div>
-            <div class="card-footer">
-
-
-            </div>
-          </div>
-
-
-        {% endfor %}
-
-
-
+      <div class="card-footer text-muted small">
+        <github-repo-lastupdate repo-name = "{{ app.github }}"><github-repo-lastupdate>
       </div>
-
-
     </div>
-  </div>
+
+
+
+    {%- endfor -%}
+ 
+
 </div>

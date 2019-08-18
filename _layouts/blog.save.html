@@ -5,13 +5,14 @@ layout: default
 
 
 {%- if site.posts.size > 0 -%}
- 
+
+<div class="container ">
 
 
     {%- for post in site.posts -%}
 
     <div class="card border-0">
-      <div class="card-body pt-0 pb-4 pl-0 pr-0">
+      <div class="card-body pl-0 pr-0">
         <div class="d-flex justify-content-between">
           <h4 class="card-title">{{ post.title | escape }}</h4>
           <small class="card-subtitle mb-2 text-muted">le {%- include date-romain.html -%}</small>
@@ -24,6 +25,8 @@ layout: default
 
 
     {%- endfor -%}
+
+</div>
 
 
 {%- endif -%}
