@@ -147,11 +147,6 @@ width: 100%;
 
 /* BLOG ---------------------------------------------- */
 
-.posts .post {
-  margin-top : 5rem;
-  margin-bottom : 5rem;
+article header #description {
+  font-size : 1.4rem;
 }
-
-  article header #description {
-    font-size : 1.4rem;
-  }
